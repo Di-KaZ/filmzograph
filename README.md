@@ -14,3 +14,5 @@ dart_frog dev
 
 # Insomnia colleciton
 There is an insomnia collection that you can import in it with all the endpoints of the api
+
+~it was a bas idea to do this in dart~
