@@ -1,12 +1,16 @@
-# filmzy
+# Filmzy 
 
-[![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
-[![License: MIT][license_badge]][license_link]
-[![Powered by Dart Frog](https://img.shields.io/endpoint?url=https://tinyurl.com/dartfrog-badge)](https://dartfrog.vgv.dev)
+# Run the server
 
-An example application built with dart_frog
+```
+ 📦 Install the dart_frog cli from pub.dev
+dart pub global activate dart_frog_cli
+```
 
-[license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
-[license_link]: https://opensource.org/licenses/MIT
-[very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
-[very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
+```
+dart run build_runner build
+dart_frog dev
+```
+
+# Insomnia colleciton
+There is an insomnia collection that you can import in it with all the endpoints of the api
