@@ -1,5 +1,6 @@
+import 'dart:convert';
 import 'dart:io';
-
+import 'package:json_annotation/json_annotation.dart';
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
 part 'database.g.dart';
@@ -32,6 +33,22 @@ class People extends Table {
 
   /// The date of birth of this people
   DateTimeColumn get birthDate => dateTime()();
+}
+
+class PeopleDTO {
+  final PeopleData people;
+  final List<FilmData>? actedIn;
+  final List<FilmData>? realisatorOf;
+  const PeopleDTO(this.people, this.actedIn, this.realisatorOf);
+
+  /// returns json for this people
+  Map<String, dynamic> toJson() {
+    return {
+      ...people.toJson(),
+      'actedIn': actedIn?.map((e) => e.toJson()).toList(),
+      'realisatorOf': realisatorOf?.map((e) => e.toJson()).toList(),
+    };
+  }
 }
 
 /// Many to many table representing the fact that [peopleId] acted in [filmId]

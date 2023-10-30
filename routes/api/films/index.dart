@@ -2,6 +2,7 @@ import 'package:dart_frog/dart_frog.dart';
 import 'package:filmzy/database.dart';
 import 'package:filmzy/utils.dart';
 
+/// @Allow(POST)
 Future<Response> onRequest(RequestContext context) async {
   return switch (context.request.method) {
     HttpMethod.post => _post(context),

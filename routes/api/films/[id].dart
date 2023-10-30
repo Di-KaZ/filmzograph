@@ -3,6 +3,7 @@ import 'package:drift/drift.dart';
 import 'package:filmzy/database.dart';
 import 'package:filmzy/utils.dart';
 
+/// @Allow(GET,DELETE,PUT)
 Future<Response> onRequest(RequestContext context, String filmId) async {
   final id = int.tryParse(filmId);
 
