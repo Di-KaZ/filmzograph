@@ -1,0 +1,360 @@
+_type: export
+__export_format: 4
+__export_date: 2023-10-30T20:47:28.506Z
+__export_source: insomnia.desktop.app:v2023.5.7
+resources:
+  - _id: req_62d1b7aa22b247e7bedd466ca06c7c1b
+    parentId: wrk_9181d87e6b0c426f8515406c4d388b26
+    modified: 1698698762660
+    created: 1698698645083
+    url: "{{ _.url }}/index.html"
+    name: swagger open in web browser (not finished at all)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: Insomnia/2023.5.7
+    authentication: {}
+    metaSortKey: -1698698645083
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_9181d87e6b0c426f8515406c4d388b26
+    parentId: null
+    modified: 1697192958414
+    created: 1697192958414
+    name: api
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_2d414904d51545808663098c26182149
+    parentId: fld_4ac655d1d48c433fa00bb70a4045877f
+    modified: 1698698556541
+    created: 1698684209188
+    url: "{{api}}people/page/1"
+    name: get peoples
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_dd814721146d4a8fa793f3d42a18ad7f
+        name: pageSize
+        value: "3"
+        description: ""
+    headers:
+      - name: User-Agent
+        value: Insomnia/2023.5.7
+    authentication: {}
+    metaSortKey: -1698698553601
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_4ac655d1d48c433fa00bb70a4045877f
+    parentId: wrk_9181d87e6b0c426f8515406c4d388b26
+    modified: 1698698548653
+    created: 1698698548653
+    name: people
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1698698548653
+    _type: request_group
+  - _id: req_1d7fcc996f8a42c1865b254e596362c7
+    parentId: fld_4ac655d1d48c433fa00bb70a4045877f
+    modified: 1698698553581
+    created: 1698675561608
+    url: "{{api}}people/1"
+    name: get a people
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: Insomnia/2023.5.7
+    authentication: {}
+    metaSortKey: -1698698553501
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_47b38dfc505945e9950919597ff6917d
+    parentId: fld_4ac655d1d48c433fa00bb70a4045877f
+    modified: 1698698573331
+    created: 1698684410004
+    url: "{{api}}people/7"
+    name: delete a people
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: Insomnia/2023.5.7
+    authentication: {}
+    metaSortKey: -1698698553451
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b4786f90dbe44382b58768d7088cca43
+    parentId: fld_4ac655d1d48c433fa00bb70a4045877f
+    modified: 1698698575094
+    created: 1698686331969
+    url: "{{api}}people/1"
+    name: modify a people
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {	
+        	"actedIn": [1]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: Insomnia/2023.5.7
+    authentication: {}
+    metaSortKey: -1698698553426
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_34ce3417c5a04ccdb77aa0813160efde
+    parentId: fld_4ac655d1d48c433fa00bb70a4045877f
+    modified: 1698698565184
+    created: 1698675579895
+    url: "{{api}}people"
+    name: create new people
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Une home",
+        	"firstName": "Connu",
+        	"birthDate": "2002-13-15",
+        	"actedIn": [3, 1],
+        	"realisatorOf": [1]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: Insomnia/2023.5.7
+    authentication: {}
+    metaSortKey: -1698698553401
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0b9e70baca854e8bab9bd0382e21f973
+    parentId: fld_c953d78772404f6693b44644ae0cb1c0
+    modified: 1697201389615
+    created: 1697193100769
+    url: "{{api}}films/1"
+    name: get a film
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: Insomnia/2023.5.7
+    authentication: {}
+    metaSortKey: -1697201160040
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_c953d78772404f6693b44644ae0cb1c0
+    parentId: wrk_9181d87e6b0c426f8515406c4d388b26
+    modified: 1697201157113
+    created: 1697201157113
+    name: films
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1697201157113
+    _type: request_group
+  - _id: req_d5e6f329f4f3434fa9e9533036b2b66b
+    parentId: fld_c953d78772404f6693b44644ae0cb1c0
+    modified: 1698698282517
+    created: 1697206954475
+    url: "{{api}}films/page/1"
+    name: get films
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_dd814721146d4a8fa793f3d42a18ad7f
+        name: pageSize
+        value: "3"
+        description: ""
+      - id: pair_fceb47cda6c44e0985278153cb5963da
+        name: realisatorName
+        value: dfgaerg
+        description: ""
+      - id: pair_0f894f785e7a436991d0d5dae5b5ad1e
+        name: actorName
+        value: fewgfw
+        description: ""
+        disabled: true
+    headers:
+      - name: User-Agent
+        value: Insomnia/2023.5.7
+    authentication: {}
+    metaSortKey: -1697201160015
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_be5d39b2d3a649dfb05aa6db2ef09c85
+    parentId: fld_c953d78772404f6693b44644ae0cb1c0
+    modified: 1697201221626
+    created: 1697201216327
+    url: "{{api}}films/2"
+    name: delete a film
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: Insomnia/2023.5.7
+    authentication: {}
+    metaSortKey: -1697201159990
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4c539ac9161241b8bac6395cbc127689
+    parentId: fld_c953d78772404f6693b44644ae0cb1c0
+    modified: 1697204371723
+    created: 1697202672815
+    url: "{{api}}films/1"
+    name: modify a film
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {	
+        	"description": "films pour zebi la mouche"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: Insomnia/2023.5.7
+    authentication: {}
+    metaSortKey: -1697201159965
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d383a65e759b4d08994420b1a59001f0
+    parentId: fld_c953d78772404f6693b44644ae0cb1c0
+    modified: 1697207025140
+    created: 1697195430154
+    url: "{{api}}films"
+    name: create new film
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Miraculous lady bug",
+        	"description": "films pour enfants",
+        	"releaseDate": "2023-13-15"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: Insomnia/2023.5.7
+    authentication: {}
+    metaSortKey: -1697201159940
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_ead6e90f5b64c5a7b7d60906d584f133ad5d9249
+    parentId: wrk_9181d87e6b0c426f8515406c4d388b26
+    modified: 1697193097088
+    created: 1697192958418
+    name: Base Environment
+    data:
+      url: http://localhost:8080
+      api: "{{url}}/api/"
+    dataPropertyOrder:
+      "&":
+        - url
+        - api
+    color: null
+    isPrivate: false
+    metaSortKey: 1697192958418
+    _type: environment
+  - _id: jar_ead6e90f5b64c5a7b7d60906d584f133ad5d9249
+    parentId: wrk_9181d87e6b0c426f8515406c4d388b26
+    modified: 1697192958420
+    created: 1697192958420
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar

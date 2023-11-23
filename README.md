@@ -1,12 +1,30 @@
-# filmzy
+# Filmzy 
 
-[![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
-[![License: MIT][license_badge]][license_link]
-[![Powered by Dart Frog](https://img.shields.io/endpoint?url=https://tinyurl.com/dartfrog-badge)](https://dartfrog.vgv.dev)
 
-An example application built with dart_frog
+#### UPDATE DOCKERFILE
 
-[license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
-[license_link]: https://opensource.org/licenses/MIT
-[very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
-[very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
+With the dockerfile just use those two commands :
+
+```bash
+docker build -t filmzy .
+docker run -it -p 8080:8080 --rm --name filmzy filmzy
+```
+
+then use insomnia collection to navigate or the swagger at `localhost:8080/index.html` (incomplete)
+
+# Run the server
+
+```
+ 📦 Install the dart_frog cli from pub.dev
+dart pub global activate dart_frog_cli
+```
+
+```
+dart run build_runner build
+dart_frog dev
+```
+
+# Insomnia colleciton
+There is an insomnia collection that you can import in it with all the endpoints of the api
+
+~it was a bas idea to do this in dart~
