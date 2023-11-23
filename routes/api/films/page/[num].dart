@@ -4,7 +4,6 @@ import 'package:dart_frog/dart_frog.dart';
 import 'package:drift/drift.dart';
 import 'package:filmzy/database.dart';
 import 'package:filmzy/utils.dart';
-import 'package:path/path.dart';
 
 /// @Query(pageSize)
 /// @Allow(GET)

@@ -1,5 +1,17 @@
 # Filmzy 
 
+
+#### UPDATE DOCKERFILE
+
+With the dockerfile just use those two commands :
+
+```bash
+docker build -t filmzy .
+docker run -it -p 8080:8080 --rm --name filmzy filmzy
+```
+
+then use insomnia collection to navigate or the swagger at `localhost:8080/index.html` (incomplete)
+
 # Run the server
 
 ```
